@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ThinkBot - Intelligent Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="background">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+        <div class="grid"></div>
+    </div>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">✦</div>
+
+                <div>
+                    <h2>ThinkBot</h2>
+                    <span>AI Assistant</span>
+                </div>
+            </div>
+
+            <button class="new-chat" id="newChatBtn">
+                <span>＋</span>
+                New Chat
+            </button>
+
+            <div class="sidebar-section">
+
+                <p class="section-title">Recent Chats</p>
+
+                <a href="#" class="chat-history active">
+                    <span>◈</span>
+                    Introduction to AI
+                </a>
+
+                <a href="#" class="chat-history">
+                    <span>◈</span>
+                    Website Ideas
+                </a>
+
+                <a href="#" class="chat-history">
+                    <span>◈</span>
+                    JavaScript Help
+                </a>
+
+                <a href="#" class="chat-history">
+                    <span>◈</span>
+                    Project Planning
+                </a>
+
+            </div>
+
+            <div class="sidebar-bottom">
+
+                <a href="#" class="sidebar-link">
+                    <span>⚙</span>
+                    Settings
+                </a>
+
+                <a href="#" class="sidebar-link">
+                    <span>?</span>
+                    Help & Support
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Main Chat -->
+        <main class="chat-area">
+
+            <!-- Top Bar -->
+            <header class="topbar">
+
+                <div class="mobile-brand">
+                    <div class="brand-icon small">✦</div>
+                    <strong>ThinkBot</strong>
+                </div>
+
+                <div class="model-info">
+
+                    <div class="status-dot"></div>
+
+                    <div>
+                        <strong>ThinkBot</strong>
+                        <span>Online</span>
+                    </div>
+
+                </div>
+
+                <div class="top-actions">
+
+                    <button id="topNewChat" title="New Chat">
+                        ＋
+                    </button>
+
+                    <button title="Settings">
+                        ⚙
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- Chat Content -->
+            <section class="chat-content" id="chatContent">
+
+                <!-- Welcome -->
+                <div class="welcome" id="welcome">
+
+                    <div class="ai-logo">
+                        <div class="logo-core">
+                            ✦
+                        </div>
+                    </div>
+
+                    <p class="welcome-label">
+                        YOUR INTELLIGENT ASSISTANT
+                    </p>
+
+                    <h1>
+                        How can I
+                        <span>help you?</span>
+                    </h1>
+
+                    <p class="welcome-description">
+                        Ask questions, explore ideas, write code,
+                        learn new concepts, or create something amazing.
+                    </p>
+
+                </div>
+
+
+                <!-- Quick Prompts -->
+                <div class="quick-prompts" id="quickPrompts">
+
+                    <button class="prompt-card" data-prompt="Explain artificial intelligence in simple words.">
+
+                        <div class="prompt-icon purple">
+                            ◇
+                        </div>
+
+                        <div>
+                            <strong>Explain AI</strong>
+                            <p>Make complex topics simple</p>
+                        </div>
+
+                        <span class="arrow">→</span>
+
+                    </button>
+
+
+                    <button class="prompt-card" data-prompt="Give me some programming project ideas.">
+
+                        <div class="prompt-icon blue">
+                            &lt;/&gt;
+                        </div>
+
+                        <div>
+                            <strong>Write Code</strong>
+                            <p>Build and debug applications</p>
+                        </div>
+
+                        <span class="arrow">→</span>
+
+                    </button>
+
+
+                    <button class="prompt-card" data-prompt="Give me some creative website ideas.">
+
+                        <div class="prompt-icon pink">
+                            ✧
+                        </div>
+
+                        <div>
+                            <strong>Brainstorm</strong>
+                            <p>Generate creative ideas</p>
+                        </div>
+
+                        <span class="arrow">→</span>
+
+                    </button>
+
+
+                    <button class="prompt-card" data-prompt="Teach me an interesting technology concept.">
+
+                        <div class="prompt-icon green">
+                            ◎
+                        </div>
+
+                        <div>
+                            <strong>Learn Something</strong>
+                            <p>Explore new knowledge</p>
+                        </div>
+
+                        <span class="arrow">→</span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- Messages -->
+                <div class="conversation" id="conversation">
+
+                    <div class="message ai-message">
+
+                        <div class="avatar ai-avatar">
+                            ✦
+                        </div>
+
+                        <div class="message-content">
+
+                            <div class="message-header">
+                                <strong>ThinkBot</strong>
+                                <span>Now</span>
+                            </div>
+
+                            <div class="message-bubble">
+                                Hello! 👋 I'm ThinkBot, your AI assistant.
+                                I'm ready to help you with coding,
+                                learning, ideas, writing, and much more.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Input -->
+            <footer class="input-area">
+
+                <div class="input-wrapper">
+
+                    <button class="input-button" title="Attach">
+                        ＋
+                    </button>
+
+                    <textarea
+                        id="messageInput"
+                        rows="1"
+                        placeholder="Message ThinkBot..."
+                        aria-label="Message ThinkBot"
+                    ></textarea>
+
+                    <button class="mic-button" title="Voice">
+                        ◉
+                    </button>
+
+                    <button class="send-button" id="sendButton" title="Send">
+                        ↑
+                    </button>
+
+                </div>
+
+                <p class="disclaimer">
+                    ThinkBot can make mistakes. Check important information.
+                </p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
